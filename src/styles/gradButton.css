@@ -26,7 +26,7 @@
   position: absolute;
   inset: 0;
   background-color: red;
-  transition: 1s;
+  transition: 0.2s;
 }
 
 .ButtCont a:hover:before{
@@ -35,7 +35,7 @@
 
 .ButtCont a:hover:after{
   inset: -3px;
-  filter:blur(10px)
+  filter:blur(4px)
 }
 
 .ButtCont a span{
