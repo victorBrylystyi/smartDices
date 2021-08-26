@@ -1,0 +1,168 @@
+
+.Navigation{
+    position: absolute;
+    width: 60px;
+    height: 100vh;
+    top:0;
+    right: 0;
+    background: #154367;
+    transition: width 1s;
+    transition-delay: 0s;
+    z-index: 999;
+    overflow: hidden;
+  }
+  
+  .Navigation.active {
+    position: absolute;
+    width: 190px;
+    height: 100vh;
+    transition: width 1s;
+    transition-delay: 0s;
+  }
+  
+  .Toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff4081;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+  .Navigation .Toggle.active {
+    background: #2196f3;
+  }
+  
+  .Toggle::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: white;
+    transform: translateY(-5px);
+    transition: 0.2s;
+  }
+
+  .Toggle::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: white;
+    transform: translateY(5px);
+    transition: 0.2s;
+  }
+  
+  .Toggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+  }
+
+  .Toggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+  }
+
+  .NavigationMenu {
+    padding-left: 5px;
+    padding-top: 7px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .MainMenuItem {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .MainMenuItem p {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+      min-width: 100%;
+      display: inline;
+  }
+
+  .ItemPanel{
+    padding-top: 7px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+  }
+
+  .MenuItem {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    /* align-items: */
+    /* justify-items: flex-start;
+    justify-content: space-between; */
+    align-items: center;
+    padding-bottom: 7px;
+  }
+  .MenuItem button {
+      width: 70px;
+      height: 40px;
+      min-width: 70px;
+      display: inline;
+      border-radius: 5px;
+  }
+
+  .MenuItem a{ 
+    position: relative;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  .MenuItem #color span{
+
+    width: 50px;
+    height: 50px;
+    /* background-color: #0c1542; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:  2.4em;
+    color: white;
+    box-sizing: border-box;
+    /* border: 2px solid #000000; */
+
+}
+
+.MenuItem #remove span{
+    width: 70px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:  1.7em;
+    color: white;
+    box-sizing: border-box;
+}
+
+.MenuItem #remove i:before,
+.MenuItem #remove i:after{
+    color: white;
+    transition: 1s;
+}
+
+
+.MenuItem #remove i:hover:before{
+    color: red;
+}
+
+.MenuItem #remove i:hover:after{
+    color: white;
+
+}
