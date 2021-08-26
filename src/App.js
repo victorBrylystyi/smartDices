@@ -8,7 +8,6 @@ import Actors from "./components/actors/Actors";
 import store from "./redux";
 import { Provider } from "react-redux";
 import React from "react";
-import Composer from "./components/Composer";
 
 const Scene = (props) => {
 
