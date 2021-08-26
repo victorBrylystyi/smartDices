@@ -1,9 +1,9 @@
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 import Planes from "./PhyPlane";
 import Dices from "./Dices";
-import { useRef } from "react";
 
 useGLTF.preload("/assets/gltf/dice.glb");
+useTexture.preload(['/assets/ground/ground.jpeg', '/assets/ground/ground_normal.jpeg']);
 
 const Actors = (props) => {
 
@@ -12,10 +12,11 @@ const Actors = (props) => {
     console.log('all actors');
 
     const { nodes } = useGLTF('/assets/gltf/dice.glb');
+    const [ floor, normal ] = useTexture(['/assets/ground/ground.jpeg', '/assets/ground/ground_normal.jpeg']);
 
     return (
         <group>
-            <Planes />
+            <Planes floor={floor} normal={normal} />
             <Dices node={nodes} d={d}/>
         </group>
     );

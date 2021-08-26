@@ -22,13 +22,12 @@ const Scene = (props) => {
         <Provider store={store}>
           <color attach="background" args={0x010620} />  //0e1538
           <ambientLight intensity={0.8} />
-          <pointLight intensity={0.7} position={[0,16,0]}/>
+          <pointLight intensity={1} position={[0,16,0]}/>
           <OrbitControls />
           <Suspense fallback={null}>
             <Physics gravity={[0, -9.81, 0]}>
               <Actors d={d} />
             </Physics>
-          <Composer />
           </Suspense>
         </Provider>
       </Canvas>
