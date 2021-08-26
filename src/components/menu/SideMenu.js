@@ -5,7 +5,6 @@ import { getRandomColor, getRandomIntInclusive } from "../../utils";
 import { useCallback, useEffect } from "react";
 
 const Toggle = () => {
-
   useEffect(()=>{
     const toggle = document.querySelector('.Toggle');
     const navigation = document.querySelector('.Navigation');

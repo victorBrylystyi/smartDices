@@ -8,7 +8,7 @@ const PhyPlane = ({color, dim, ...props}) => {
   
   return (
     <Plane ref={ref} args={dim} >
-      <meshStandardMaterial color={color} metalness={1} roughness={0.3} />
+      <meshStandardMaterial color={color} metalness={0.9} roughness={0.3} />
     </Plane>
   );
 };

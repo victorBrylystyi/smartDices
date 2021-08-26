@@ -17,7 +17,7 @@ const Scene = (props) => {
   
   return (
     <div className='App'>
-      <Canvas dpr={[1, 1.5]} camera={{ position: [0, 2, 5] }}>
+      <Canvas dpr={[1, 1.5]} camera={{ position: [0, 15, 15] }}>
         <Provider store={store}>
           <color attach="background" args={0x010620} />  //0e1538
           <ambientLight intensity={0.8} />
