@@ -1,32 +1,52 @@
-﻿# Dice role simulator
+﻿# Scene state controll
+Application controlling the state of the scene by example simulation of dice rolls on a glass floor. The application uses such technologies:
+- [React-three-fiber](https://github.com/pmndrs/react-three-fiber) 
+- [Redux](https://redux.js.org/)
+- [React-Redux](https://react-redux.js.org/)
 
-Simulation of dice rolls on a glass floor and using bloom post-processing effect. The application is build on a [React-three-fiber](https://github.com/pmndrs/react-three-fiber) library.  
+## Functions
 
-## Functions 
-**Click** on any die to roll; 
-**R** - reset dices position to initial;
-**C** - change dices color;
-**I** - toss all dices.
+The following functions are implemented using the buttons on the side panel:
 
-# Demo 
- <p  align="center"> 
- <img  src="/gif/dices.gif"  width="80%"  height="80%">
- </p>
+ - Add dice 
+ - Clear scene and history 
+ - Undo scene
+ - Redo scene
+ - Drop dices
+ - Change color current dice (click on dice icon) 
+ - Remove dice from scene 
+
+# Demo
+
+<p  align="center">
+
+<img  src="/gif/smartDices.gif"  width="80%"  height="80%">
+
+</p>
+
 <h2  align="center">
-	<a  href="https://dice-react-app.herokuapp.com/">DEMO</a>
+
+<a  href="https://smart-dices.herokuapp.com/">DEMO</a>
+
 </h2>
 
-# Usage 
+  
+
+# Usage
+
 From root project install modules:
 
     npm install
-    
-To run dev server use: 
+
+To run dev server use:
 
     npm run startDemo
 
+  
+  
 
-# Docs 
+# Docs
 
-- [React-three-fiber](https://docs.pmnd.rs/home) 
-
+-   [R3f](https://github.com/pmndrs/react-three-fiber) 
+- [Redux](https://redux.js.org/)
+- [React-Redux](https://react-redux.js.org/)

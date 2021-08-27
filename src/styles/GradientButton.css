@@ -1,0 +1,85 @@
+
+.ButtCont
+{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-items: flex-start;
+  justify-content: space-between;
+}
+
+.ButtCont a{
+  position: relative;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.ButtCont a:before,
+.ButtCont a:after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: red;
+  transition: 0.2s;
+}
+
+.ButtCont a:hover:before{
+  inset: -3px;
+}
+
+.ButtCont a:hover:after{
+  inset: -3px;
+  filter:blur(4px)
+}
+
+.ButtCont a span{
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  background-color: #0c1542;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:  1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+}
+
+.ButtCont div:nth-of-type(1)>a::before,
+.ButtCont div:nth-of-type(1)>a::after
+{
+  background: linear-gradient(45deg,#0aeedb,#6d287a,#32c714);
+} 
+.ButtCont div:nth-of-type(2)>a::before,
+.ButtCont div:nth-of-type(2)>a::after
+{
+  background: linear-gradient(45deg,#e209b3,#010620,#c7145f);
+} 
+.ButtCont div:nth-of-type(3)>a::before,
+.ButtCont div:nth-of-type(3)>a::after
+{
+  background: linear-gradient(45deg,#0ef806,#a305ff,#f8a202);
+} 
+.ButtCont div:nth-of-type(4)>a::before,
+.ButtCont div:nth-of-type(4)>a::after
+{
+  background: linear-gradient(45deg,#ffd905,#04f8bb,#5f3096);
+} 
+
+.ButtCont div:nth-of-type(5)>a::before,
+.ButtCont div:nth-of-type(5)>a::after
+{
+  background: linear-gradient(45deg,#ff0505,#ffae00,#7401f8);
+} 

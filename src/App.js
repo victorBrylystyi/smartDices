@@ -1,7 +1,7 @@
 
 import { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, CameraShake} from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { Physics } from "@react-three/cannon";
 import SideMenu from "./components/menu/SideMenu";
 import Actors from "./components/actors/Actors";

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>readmeDice.md</title>
+  <title>smartDices</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 
@@ -13,7 +13,7 @@
     <div class="stackedit__toc">
       
 <ul>
-<li><a href="#dice-role-simulator">Dice role simulator</a>
+<li><a href="#scene-state-controll">Scene state controll</a>
 <ul>
 <li><a href="#functions">Functions</a></li>
 </ul>
@@ -31,20 +31,31 @@
   </div>
   <div class="stackedit__right">
     <div class="stackedit__html">
-      <h1 id="dice-role-simulator">Dice role simulator</h1>
-<p>Simulation of dice rolls on a glass floor and using bloom post-processing effect. The application is build on a <a href="https://github.com/pmndrs/react-three-fiber">React-three-fiber</a> library.</p>
+      <h1 id="scene-state-controll">Scene state controll</h1>
+<p>Application controlling the state of the scene by example simulation of dice rolls on a glass floor. The application uses such technologies:</p>
+<ul>
+<li><a href="https://github.com/pmndrs/react-three-fiber">React-three-fiber</a></li>
+<li><a href="https://redux.js.org/">Redux</a></li>
+<li><a href="https://react-redux.js.org/">React-Redux</a></li>
+</ul>
 <h2 id="functions">Functions</h2>
-<p><strong>Click</strong> on any die to roll;<br>
-<strong>R</strong> - reset dices position to initial;<br>
-<strong>C</strong> - change dices color;<br>
-<strong>I</strong> - toss all dices.</p>
+<p>The following functions are implemented using the buttons on the side panel:</p>
+<ul>
+<li>Add dice</li>
+<li>Clear scene and history</li>
+<li>Undo scene</li>
+<li>Redo scene</li>
+<li>Drop dices</li>
+<li>Change color current dice (click on dice icon)</li>
+<li>Remove dice from scene</li>
+</ul>
 <h1 id="demo">Demo</h1>
- <p align="center"> 
- <img src="/gif/dices.gif" width="80%" height="80%">
- </p>
+<p align="center">
+</p><img src="/gif/smartDices.gif" width="80%" height="80%">
+
 <h2 align="center">
-	<a href="https://dice-react-app.herokuapp.com/">DEMO</a>
-</h2>
+</h2><p><a href="https://smart-dices.herokuapp.com/">DEMO</a></p>
+
 <h1 id="usage">Usage</h1>
 <p>From root project install modules:</p>
 <pre><code>npm install
@@ -54,7 +65,9 @@
 </code></pre>
 <h1 id="docs">Docs</h1>
 <ul>
-<li><a href="https://docs.pmnd.rs/home">React-three-fiber</a></li>
+<li><a href="https://github.com/pmndrs/react-three-fiber">R3f</a></li>
+<li><a href="https://redux.js.org/">Redux</a></li>
+<li><a href="https://react-redux.js.org/">React-Redux</a></li>
 </ul>
 
     </div>

@@ -5,7 +5,9 @@ import { getRandomColor, getRandomIntInclusive } from "../../utils";
 import { useCallback, useEffect } from "react";
 
 const Toggle = () => {
+
   useEffect(()=>{
+
     const toggle = document.querySelector('.Toggle');
     const navigation = document.querySelector('.Navigation');
     const app = document.querySelector('.App');
@@ -20,7 +22,6 @@ const Toggle = () => {
   },[]);
 
   return <div className="Toggle" />; 
-
 };
 
 const MainMenuItem = (props) => {
@@ -37,7 +38,6 @@ const MainMenuItem = (props) => {
       <p> {text} </p>
     </div>
   );
-
 };
 
 const SideMenu = (props) => {
@@ -69,9 +69,12 @@ const SideMenu = (props) => {
 
     const drop = useCallback((childrens) => {
       childrens.forEach(element => {
-        element.api.applyImpulse([getRandomIntInclusive(-7,7), getRandomIntInclusive(0,10), getRandomIntInclusive(-7,7)], [0, 0, 0]);
+        element.api.applyImpulse([getRandomIntInclusive(-7,7), 
+          getRandomIntInclusive(0,10), 
+          getRandomIntInclusive(-7,7)], [0, 0, 0]);
       })
     },[]);
+
     return (
       <div className="Navigation">
         <Toggle />
@@ -87,62 +90,10 @@ const SideMenu = (props) => {
           <div className='ItemPanel'>
             { newArrElements }
           </div>
-
         </div>
       </div>
 
     );
-
-    // return (
-    //     <div className='SideMenu'>
-    //         <div className='MainMenu'> 
-    //           <h1>Scene plan</h1>
-    //           <button style={{width:'100px',height:'30px'}}
-    //                   className='AddButton' 
-    //                   onClick={() => clear() }>
-    //                   Clear scene
-    //           </button>
-    //         </div>
-    //         <div className='MenuButtons'>
-    //           {/* <button 
-    //               className='AddButton' 
-    //               onClick={() => add( { id: Date.now().toString(),color: getRandomColor() } ) }>
-    //               Add Dice
-    //           </button> */}
-    //           <div className='ButtCont' 
-    //              onClick={() => add( { id: Date.now().toString(),color: getRandomColor() } ) }>
-    //           <a>
-    //             <span>Add Dice</span>
-    //           </a>
-    //         </div>
-    //         <div className='ButtCont' 
-    //               onClick={ () => undo(createDataFromChildren(d.current.children)) }>
-    //           <a>
-    //             <span>Undo</span>
-    //           </a>
-    //         </div>
-    //         <div className='ButtCont' 
-    //               onClick={ () => redo(createDataFromChildren(d.current.children)) }>
-    //           <a>
-    //             <span>Redo</span>
-    //           </a>
-    //         </div>
-    //           {/* <button 
-    //               className='UndoButton'
-    //               onClick={ () => undo(createDataFromChildren(d.current.children)) }>
-    //               Undo
-    //           </button>
-    //           <button 
-    //               className='RedoButton'
-    //               onClick={ () => redo(createDataFromChildren(d.current.children)) }>
-    //               Redo
-    //           </button> */}
-    //         </div>
-    //         <div className='itemList'>
-    //             { newArrElements }
-    //         </div>
-    //     </div>
-    // );
   };
 
   const mapStateToProps = (state) => {
@@ -175,7 +126,7 @@ const SideMenu = (props) => {
     };
   };
 
-  export default connect(mapStateToProps, mapDispatchToProps)(SideMenu);
+export default connect(mapStateToProps, mapDispatchToProps)(SideMenu);
 
 
 
