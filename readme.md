@@ -26,7 +26,7 @@ The following functions are implemented using the buttons on the side panel:
 
 <h2  align="center">
 
-<a  href="https://smart-dices.herokuapp.com/">DEMO</a>
+<a  href="https://drop-dices-simulator.netlify.app/">DEMO</a>
 
 </h2>
 
